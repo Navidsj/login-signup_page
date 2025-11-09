@@ -34,7 +34,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 }
 
-
 ?>
 
 
@@ -65,3 +64,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="theme-btn-container"></div>
 </section>
 </body>
+
+<script src="style.js" type="text/javascript"></script>

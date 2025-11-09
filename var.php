@@ -65,3 +65,5 @@ if(isset($_SESSION['code'])){
     <div class="theme-btn-container"></div>
 </section>
 </body>
+
+<script src="style.js" type="text/javascript"></script>
