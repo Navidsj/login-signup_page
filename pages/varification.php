@@ -1,12 +1,12 @@
 <?php
-require "Jwt.php";
+require "../classes/Jwt.php";
 session_start();
 
 if(isset($_SESSION['code'])){
 
     if(time() - $_SESSION['last_activity'] > 60 * 2){
         session_destroy();
-        header("Location: login.php");
+        header("Location: pages/login.php");
     }
 
     $jwtBuilder = new Jwt();
@@ -35,15 +35,13 @@ if(isset($_SESSION['code'])){
 
 
 }else{
-    header("location:login.php");
+    header("location: login.php");
 }
-
-
-
 
 ?>
 
-<link rel="stylesheet" href="styl.css">
+
+<link rel="stylesheet" href="../html-and-css/styl.css">
 <body>
 <section class="container">
     <div class="login-container">
@@ -57,7 +55,7 @@ if(isset($_SESSION['code'])){
                 <button class="opacity">SUBMIT</button>
             </form>
             <div class="register-forget opacity">
-                <a href="http://localhost/auth/login.php">LOGIN AGAIN</a>
+                <a href="http://localhost/auth/pages/login.php">LOGIN AGAIN</a>
             </div>
         </div>
         <div class="circle circle-two"></div>
@@ -66,4 +64,5 @@ if(isset($_SESSION['code'])){
 </section>
 </body>
 
-<script src="style.js" type="text/javascript"></script>
+<script src="../html-and-css/style.js" type="text/javascript"></script>
+
