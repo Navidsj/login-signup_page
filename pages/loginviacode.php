@@ -7,7 +7,7 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
 
-    if(LoginSignupService::checkUsername($username)){
+    if(!LoginSignupService::checkUsername($username)){
         $wrong = true;
     }else {
         $message = findByUsername($username);

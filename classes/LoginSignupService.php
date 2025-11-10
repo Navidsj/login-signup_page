@@ -1,5 +1,5 @@
 <?php
-include "../pages/db.php";
+include "db.php";
 class LoginSignupService{
 
 
